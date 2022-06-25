@@ -3,8 +3,7 @@ import { Movies } from "../components/Movies";
 import { Preloader } from "../components/Preloader"
 import Search from "../components/Search";
 
-const API_KEY = process.env.REACT__APP_API_KEY;
-
+const API_KEY = '92f0a021';
 class Main extends React.Component {
   state = {
     movies: [],
