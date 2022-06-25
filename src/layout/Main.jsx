@@ -21,10 +21,8 @@ class Main extends React.Component {
     fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${type === 'all' ? '' : `&type=${type}`}`)
       .then(response => response.json())
       .then(data => this.setState({ movies: data.Search }))
-      .catch(err => {
-        console.log(err);
-        this.setState({ loading: false });
-      });
+      .catch(err => console.log(err));
+    this.setState({ loading: false });
   }
 
   render() {
